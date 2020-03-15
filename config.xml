@@ -1,0 +1,13 @@
+<config>
+  <!-- Slot Control -->
+  <power v='full'/>
+
+  <!-- User Information -->
+  <passkey v='a4c0402c1efb0cbba4c0402c1efb0cbb'/>
+  <team v='225605'/>
+  <user v='Sphexing'/>
+
+  <!-- Folding Slots -->
+  <slot id='0' type='CPU'/>
+  <slot id='1' type='GPU'/>
+</config>

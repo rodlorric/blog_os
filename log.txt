@@ -1,0 +1,120 @@
+*********************** Log Started 2020-03-15T01:08:45Z ***********************
+01:08:45:************************* Folding@home Client *************************
+01:08:45:        Website: https://foldingathome.org/
+01:08:45:      Copyright: (c) 2009-2018 foldingathome.org
+01:08:45:         Author: Joseph Coffland <joseph@cauldrondevelopment.com>
+01:08:45:           Args: 
+01:08:45:         Config: /home/ricardo/blog_os/config.xml
+01:08:45:******************************** Build ********************************
+01:08:45:        Version: 7.5.1
+01:08:45:           Date: May 11 2018
+01:08:45:           Time: 19:59:04
+01:08:45:     Repository: Git
+01:08:45:       Revision: 4705bf53c635f88b8fe85af7675557e15d491ff0
+01:08:45:         Branch: master
+01:08:45:       Compiler: GNU 6.3.0 20170516
+01:08:45:        Options: -std=gnu++98 -O3 -funroll-loops
+01:08:45:       Platform: linux2 4.14.0-3-amd64
+01:08:45:           Bits: 64
+01:08:45:           Mode: Release
+01:08:45:******************************* System ********************************
+01:08:45:            CPU: AMD Ryzen 5 3600X 6-Core Processor
+01:08:45:         CPU ID: AuthenticAMD Family 23 Model 113 Stepping 0
+01:08:45:           CPUs: 12
+01:08:45:         Memory: 15.65GiB
+01:08:45:    Free Memory: 11.60GiB
+01:08:45:        Threads: POSIX_THREADS
+01:08:45:     OS Version: 5.5
+01:08:45:    Has Battery: false
+01:08:45:     On Battery: false
+01:08:45:     UTC Offset: 0
+01:08:45:            PID: 9451
+01:08:45:            CWD: /home/ricardo/blog_os
+01:08:45:             OS: Linux 5.5.8-1-MANJARO x86_64
+01:08:45:        OS Arch: AMD64
+01:08:45:           GPUs: 1
+01:08:45:          GPU 0: Bus:38 Slot:0 Func:0 NVIDIA:8 TU104 [GeForce RTX 2070 Super]
+01:08:45:                 8218
+01:08:45:  CUDA Device 0: Platform:0 Device:0 Bus:38 Slot:0 Compute:7.5 Driver:10.2
+01:08:45:OpenCL Device 0: Platform:0 Device:0 Bus:38 Slot:0 Compute:1.2 Driver:440.64
+01:08:45:***********************************************************************
+01:08:45:<config>
+01:08:45:  <!-- User Information -->
+01:08:45:  <passkey v='********************************'/>
+01:08:45:  <team v='225605'/>
+01:08:45:  <user v='Sphexing'/>
+01:08:45:
+01:08:45:  <!-- Folding Slots -->
+01:08:45:</config>
+01:08:45:Trying to access database...
+01:08:45:Successfully acquired database lock
+01:08:45:Enabled folding slot 00: READY cpu:10
+01:08:45:Enabled folding slot 01: READY gpu:0:TU104 [GeForce RTX 2070 Super] 8218
+01:08:45:WU00:FS00:Connecting to 65.254.110.245:8080
+01:08:45:WU01:FS01:Connecting to 65.254.110.245:8080
+01:08:46:WU01:FS01:Connecting to 65.254.110.245:8080
+01:08:46:WU00:FS00:Connecting to 65.254.110.245:8080
+01:08:47:WU01:FS01:Assigned to work server 155.247.164.213
+01:08:47:WU01:FS01:Requesting new work unit for slot 01: READY gpu:0:TU104 [GeForce RTX 2070 Super] 8218 from 155.247.164.213
+01:08:47:WU01:FS01:Connecting to 155.247.164.213:8080
+[93m01:08:47:WARNING:WU00:FS00:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+01:08:47:WU00:FS00:Connecting to 18.218.241.186:80
+[91m01:08:47:ERROR:WU01:FS01:Exception: 10001: Server responded: HTTP_SERVICE_UNAVAILABLE[0m
+01:08:48:WU01:FS01:Connecting to 65.254.110.245:8080
+[93m01:08:48:WARNING:WU00:FS00:Failed to get assignment from '18.218.241.186:80': No WUs available for this configuration[0m
+[91m01:08:48:ERROR:WU00:FS00:Exception: Could not get an assignment[0m
+01:08:48:WU00:FS00:Connecting to 65.254.110.245:8080
+01:08:48:WU01:FS01:Assigned to work server 155.247.164.213
+01:08:48:WU01:FS01:Requesting new work unit for slot 01: READY gpu:0:TU104 [GeForce RTX 2070 Super] 8218 from 155.247.164.213
+01:08:48:WU01:FS01:Connecting to 155.247.164.213:8080
+[93m01:08:48:WARNING:WU00:FS00:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+01:08:48:WU00:FS00:Connecting to 18.218.241.186:80
+[91m01:08:49:ERROR:WU01:FS01:Exception: 10001: Server responded: HTTP_SERVICE_UNAVAILABLE[0m
+[93m01:08:49:WARNING:WU00:FS00:Failed to get assignment from '18.218.241.186:80': No WUs available for this configuration[0m
+[91m01:08:49:ERROR:WU00:FS00:Exception: Could not get an assignment[0m
+01:09:46:Saving configuration to config.xml
+01:09:46:<config>
+01:09:46:  <!-- Slot Control -->
+01:09:46:  <power v='full'/>
+01:09:46:
+01:09:46:  <!-- User Information -->
+01:09:46:  <passkey v='********************************'/>
+01:09:46:  <team v='225605'/>
+01:09:46:  <user v='Sphexing'/>
+01:09:46:
+01:09:46:  <!-- Folding Slots -->
+01:09:46:  <slot id='0' type='CPU'/>
+01:09:46:  <slot id='1' type='GPU'/>
+01:09:46:</config>
+01:09:48:WU01:FS01:Connecting to 65.254.110.245:8080
+01:09:48:WU00:FS00:Connecting to 65.254.110.245:8080
+01:09:48:WU01:FS01:Assigned to work server 140.163.4.231
+01:09:48:WU01:FS01:Requesting new work unit for slot 01: READY gpu:0:TU104 [GeForce RTX 2070 Super] 8218 from 140.163.4.231
+01:09:48:WU01:FS01:Connecting to 140.163.4.231:8080
+[93m01:09:48:WARNING:WU00:FS00:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+01:09:48:WU00:FS00:Connecting to 18.218.241.186:80
+[93m01:09:49:WARNING:WU00:FS00:Failed to get assignment from '18.218.241.186:80': No WUs available for this configuration[0m
+[91m01:09:49:ERROR:WU00:FS00:Exception: Could not get an assignment[0m
+01:11:25:WU00:FS00:Connecting to 65.254.110.245:8080
+[93m01:11:25:WARNING:WU00:FS00:Failed to get assignment from '65.254.110.245:8080': No WUs available for this configuration[0m
+01:11:25:WU00:FS00:Connecting to 18.218.241.186:80
+[93m01:11:26:WARNING:WU00:FS00:Failed to get assignment from '18.218.241.186:80': No WUs available for this configuration[0m
+[91m01:11:26:ERROR:WU00:FS00:Exception: Could not get an assignment[0m
+[93m01:11:57:WARNING:WU01:FS01:WorkServer connection failed on port 8080 trying 80[0m
+01:11:57:WU01:FS01:Connecting to 140.163.4.231:80
+01:14:02:WU00:FS00:Connecting to 65.254.110.245:8080
+01:14:03:WU00:FS00:Assigned to work server 155.247.164.213
+01:14:03:WU00:FS00:Requesting new work unit for slot 00: READY cpu:11 from 155.247.164.213
+01:14:03:WU00:FS00:Connecting to 155.247.164.213:8080
+[91m01:14:03:ERROR:WU00:FS00:Exception: 10001: Server responded: HTTP_SERVICE_UNAVAILABLE[0m
+[91m01:14:07:ERROR:WU01:FS01:Exception: Failed to connect to 140.163.4.231:80: Connection timed out[0m
+01:14:07:WU01:FS01:Connecting to 65.254.110.245:8080
+01:14:08:WU01:FS01:Assigned to work server 155.247.166.220
+01:14:08:WU01:FS01:Requesting new work unit for slot 01: READY gpu:0:TU104 [GeForce RTX 2070 Super] 8218 from 155.247.166.220
+01:14:08:WU01:FS01:Connecting to 155.247.166.220:8080
+[91m01:14:08:ERROR:WU01:FS01:Exception: 10001: Server responded: HTTP_SERVICE_UNAVAILABLE[0m
+01:14:53:Caught signal SIGHUP(1) on PID 9451
+01:14:53:Caught signal SIGHUP(1) on PID 9451
+01:14:53:Exiting, please wait. . .
+[93m01:14:53:WARNING:Next signal will force exit[0m
+01:14:55:Clean exit

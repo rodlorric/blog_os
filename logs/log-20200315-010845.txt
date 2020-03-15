@@ -1,0 +1,60 @@
+*********************** Log Started 2020-03-15T01:06:36Z ***********************
+01:06:36:************************* Folding@home Client *************************
+01:06:36:        Website: https://foldingathome.org/
+01:06:36:      Copyright: (c) 2009-2018 foldingathome.org
+01:06:36:         Author: Joseph Coffland <joseph@cauldrondevelopment.com>
+01:06:36:           Args: 
+01:06:36:         Config: <none>
+01:06:36:******************************** Build ********************************
+01:06:36:        Version: 7.5.1
+01:06:36:           Date: May 11 2018
+01:06:36:           Time: 19:59:04
+01:06:36:     Repository: Git
+01:06:36:       Revision: 4705bf53c635f88b8fe85af7675557e15d491ff0
+01:06:36:         Branch: master
+01:06:36:       Compiler: GNU 6.3.0 20170516
+01:06:36:        Options: -std=gnu++98 -O3 -funroll-loops
+01:06:36:       Platform: linux2 4.14.0-3-amd64
+01:06:36:           Bits: 64
+01:06:36:           Mode: Release
+01:06:36:******************************* System ********************************
+01:06:36:            CPU: AMD Ryzen 5 3600X 6-Core Processor
+01:06:36:         CPU ID: AuthenticAMD Family 23 Model 113 Stepping 0
+01:06:36:           CPUs: 12
+01:06:36:         Memory: 15.65GiB
+01:06:36:    Free Memory: 12.00GiB
+01:06:36:        Threads: POSIX_THREADS
+01:06:36:     OS Version: 5.5
+01:06:36:    Has Battery: false
+01:06:36:     On Battery: false
+01:06:36:     UTC Offset: 0
+01:06:36:            PID: 9304
+01:06:36:            CWD: /home/ricardo/blog_os
+01:06:36:             OS: Linux 5.5.8-1-MANJARO x86_64
+01:06:36:        OS Arch: AMD64
+01:06:36:           GPUs: 0
+01:06:36:  CUDA Device 0: Platform:0 Device:0 Bus:38 Slot:0 Compute:7.5 Driver:10.2
+01:06:36:OpenCL Device 0: Platform:0 Device:0 Bus:38 Slot:0 Compute:1.2 Driver:440.64
+01:06:36:***********************************************************************
+01:06:36:<config>
+01:06:36:  <!-- Folding Slots -->
+01:06:36:</config>
+01:06:36:Connecting to assign1.foldingathome.org:8080
+01:06:37:Updated GPUs.txt
+01:06:37:Read GPUs.txt
+01:06:37:Trying to access database...
+01:06:37:Successfully acquired database lock
+01:06:37:Enabled folding slot 00: PAUSED cpu:10 (not configured)
+01:06:37:Enabled folding slot 01: PAUSED gpu:0:TU104 [GeForce RTX 2070 Super] 8218 (not configured)
+01:07:05:Caught signal SIGINT(2) on PID 9304
+01:07:05:Exiting, please wait. . .
+01:07:06:Caught signal SIGINT(2) on PID 9304
+[93m01:07:06:WARNING:Next signal will force exit[0m
+01:07:06:Saving configuration to config.xml
+01:07:06:<config>
+01:07:06:  <!-- Folding Slots -->
+01:07:06:  <slot id='0' type='CPU'/>
+01:07:06:  <slot id='1' type='GPU'/>
+01:07:06:</config>
+01:07:06:Set client configured
+01:07:06:Clean exit
