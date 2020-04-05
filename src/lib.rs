@@ -11,6 +11,7 @@ pub mod interrupts;
 pub mod serial;
 pub mod vga_buffer;
 pub mod gdt;
+pub mod memory;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 #[repr(u32)]
@@ -50,6 +51,12 @@ pub fn test_panic_handler(info: &PanicInfo) -> ! {
     hlt_loop();
 }
 
+#[cfg(test)]
+use bootloader::{entry_point, BootInfo};
+
+#[cfg(test)]
+entry_point!(test_kernel_main);
+
 /// Entry point for `cargo xtest`
 #[cfg(test)]
 #[no_mangle]
@@ -64,6 +71,7 @@ pub extern "C" fn _start() -> ! {
 fn panic(info: &PanicInfo) -> ! {
     test_panic_handler(info);
 }
+
 
 pub fn hlt_loop() -> ! {
     loop {

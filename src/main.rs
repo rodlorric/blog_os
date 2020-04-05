@@ -6,63 +6,44 @@
 
 use blog_os::println;
 use core::panic::PanicInfo;
+use bootloader::{entry_point, BootInfo};
 
-#[no_mangle] // don't mangle the name of this function
-pub extern "C" fn _start() -> ! {
-    // this function is the entry point, since the linker looks fro a function
-    // named `_start` by default
-    
-    /*
-    let vga_buffer = 0xb8000 as *mut u8;
+entry_point!(kernel_main); 
 
-    for (i, &byte) in HELLO.iter().enumerate() {
-        unsafe {
-            *vga_buffer.offset(i as isize * 2) = byte;
-            *vga_buffer.offset(i as isize * 2 + 1) = 0xb;
-        }
-    }
-    */
+fn kernel_main(boot_info: &'static BootInfo) -> ! {
+    use blog_os::memory::{self, BootInfoFrameAllocator};
+    use x86_64::{structures::paging::Page, VirtAddr};
 
-    //vga_buffer::print_something();
-    
-    //use core::fmt::Write;
-    //vga_buffer::WRITER.lock().write_str("Hello again").unwrap();
-    //write!(vga_buffer::WRITER.lock(), ", some numbers: {} {}", 42, 1.337).unwrap();
-    
     println!("Hello World{}", "?");
-
     blog_os::init();
 
-    use x86_64::registers::control::Cr3;
+    let phys_mem_offset = VirtAddr::new(boot_info.physical_memory_offset);
+    let mut mapper = unsafe { memory::init(phys_mem_offset) };
+    let mut frame_allocator = unsafe { BootInfoFrameAllocator::init(&boot_info.memory_map) };
 
-    let (level_4_page_table, _) = Cr3::read();
-    println!("Level 4 page table at: {:?}", level_4_page_table.start_address());
+    // map an unused page
+    //let page = Page::containing_address(VirtAddr::new(0));
+    let page = Page::containing_address(VirtAddr::new(0xdeadbeaf000));
+    memory::create_example_mapping(page, &mut mapper, &mut frame_allocator);
 
-    // invoke a breakpoint exception
-    //x86_64::instructions::interrupts::int3();
+    // write the string `New!` to the screen through the new mapping
+    let page_ptr: *mut u64 = page.start_address().as_mut_ptr();
+    unsafe { page_ptr.offset(400).write_volatile(0x_f021_f077_f065_f04e)};
 
-    // trigger a page fault
-    //unsafe {
-    //    *(0xdeadbeef as *mut u64) = 42;
-    //};
+    let addresses = [
+        // the identity-mapped vga buffer page
+        0xb8000,
+        // some code page
+        0x201000,
+        // some stack page
+        0x0100_0020_1a10,
+        // virtual address mapped to physical address 0
+        boot_info.physical_memory_offset,
+    ];
 
-    //let ptr = 0xdeadbeaf as *mut u32;
-    let ptr = 0x203192 as *mut u32;
-
-    //read from a code page
-    unsafe { let x = *ptr; }
-    println!("read worked");
-
-    // write to a code page
-    unsafe { *ptr = 42; }
-    println!("write worked");
-
-    //fn stack_overflow() {
-    //    stack_overflow(); // for each recursion, the return address is pushed
-    //}
-
-    // trigger a stack overflow
-    //stack_overflow();
+    let mut frame_allocator = unsafe {
+        BootInfoFrameAllocator::init(&boot_info.memory_map)
+    };
 
     #[cfg(test)]
     test_main();
