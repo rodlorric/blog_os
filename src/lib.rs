@@ -4,6 +4,9 @@
 #![cfg_attr(test, no_main)]
 #![feature(custom_test_frameworks)]
 #![test_runner(crate::test_runner)]
+#![feature(alloc_layout_extra)]
+#![feature(const_fn)]
+#![feature(const_in_array_repeat_expressions)]
 #![reexport_test_harness_main = "test_main"]
 
 use core::panic::PanicInfo;
